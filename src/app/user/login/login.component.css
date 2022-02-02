@@ -1,0 +1,73 @@
+/* .card{
+    border: none;
+    width: 400px;
+    padding: 40px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    background: hsla(205, 46%, 30%, 1);
+    background: linear-gradient(90deg,hsla(205, 46%, 30%, 1) 0%, hsla(260, 29%, 36%, 1)100%);
+} */
+.card-container.card {
+    max-width: 400px !important;
+    padding: 40px 40px;
+    border-radius: 25px;
+  }
+
+.card {
+    background-color: #f7f7f7;
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    border-radius: 25px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    
+  }
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.card label h1,
+h6{
+        color: #fff;
+}
+
+label{
+    color: #fff;
+}
+
+.error-message{
+    visibility: visible;
+    color: #D8000C;
+    background-color: #FFBABA;
+    -webkit-animation: hideAnimation 5s forwards; 
+    animation: hideAnimation 5s forwards;
+ }
+
+ 
+ .btn-primary{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width:45%;
+    height:auto;
+    display:inline-block;
+
+ }
+
+ @keyframes hideAnimation {
+    to {
+      visibility: hidden;
+    }
+ }

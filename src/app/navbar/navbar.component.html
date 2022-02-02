@@ -1,0 +1,57 @@
+<!-- <nav class='navbar navbar-expand navbar-light bg-light'>
+    <a class='navbar-brand'>{{pageTitle}}</a>
+    <ul class='nav nav-pills'>
+      <li><a class='nav-link' routerLink='/welcome'>Home</a></li>
+      <li><a *ngIf="isAuthenticated" class='nav-link' routerLink='/productsSpring'>Products</a></li>
+      <li><a *ngIf="isAdmin" class='nav-link' routerLink='/orders'>Orders</a></li>
+
+    </ul>
+    <ul class='navbar-nav ms-auto'>
+    <li><a *ngIf="isAuthenticated" class='nav-link' routerLink='/shoppingCart'> Shopping Cart </a> </li>
+    <li><a *ngIf="isAuthenticated" class='nav-link'> {{this.userRole}} </a> </li>
+    <li><a *ngIf="!isAuthenticated" class='nav-link'  routerLink='/login'>Login</a></li>
+    <li><a *ngIf="!isAuthenticated" class='nav-link' routerLink='/signup'>Register</a></li>
+    <li><a *ngIf="isAuthenticated" class='nav-link' (click)="onLogout()">Logout</a></li>
+    </ul>
+  </nav> -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img src="..\..\assets\images\garagesalelogo.jpg" alt="Logo" class="img-fluid" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" routerLink='/welcome'>Home</a>
+                </li>
+
+                <li class="nav-item" *ngIf="isAuthenticated">
+                  <a class="nav-link" routerLink='/productsSpring'>Products</a>
+                </li>
+
+                <li class="nav-item" *ngIf="isAuthenticated && isAdmin">
+                  <a class="nav-link" routerLink='/orders'>Orders</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+               
+            </ul>
+            <div class="d-flex">
+              <ul class='navbar-nav ms-auto'>
+                <li><a *ngIf="isAuthenticated" class='nav-link' routerLink='/shoppingCart'>
+                  <!-- <img src="..\..\assets\images\shopping-cart-icon.jpg" alt="Logo" class="img-fluid" /> -->
+                   Shopping Cart </a> </li>
+                <li><a *ngIf="isAuthenticated" class='nav-link'> {{this.userRole}} </a> </li>
+                <li><a *ngIf="!isAuthenticated" class='nav-link'  routerLink='/login'>Login</a></li>
+                <li><a *ngIf="!isAuthenticated" class='nav-link' routerLink='/signup'>Register</a></li>
+                <li> <a *ngIf="isAuthenticated" class="nav-link" (click)="onLogout()">Logout </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

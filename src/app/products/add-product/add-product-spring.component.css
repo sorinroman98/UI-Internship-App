@@ -1,0 +1,15 @@
+div {
+    background:#ffffff;
+    padding: 5px;
+  }
+  button{
+      background-color: firebrick;
+      margin-top: 15px;
+  }
+  
+  .error-message{
+    visibility: visible;
+    color: #D8000C;
+    background-color: #FFBABA;
+    
+ }

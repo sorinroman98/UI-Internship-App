@@ -1,0 +1,33 @@
+<div class="col-md-12">
+<div class="card card-container">
+  <img id="profile-img" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" class="profile-img-card" />
+
+<form *ngIf="!isSuccessful" class="text-center border border-light p-5" [formGroup]= "signupForm" (ngSubmit)="signup()">
+
+  <p class="h4 mb-4">Sign Up</p>
+
+  <input type="text" formControlName="name" class="form-control mb-4" placeholder="name">
+
+  <input type="email" formControlName="email" class="form-control mb-4" placeholder="E-mail">
+
+  <input type="password" formControlName="password" class="form-control mb-4" placeholder="Password">
+
+  <div class="d-flex justify-content-around">
+    <div class="error-message" *ngIf="this.errorMessage" >
+      {{ this.errorMessage }}
+    </div>
+  </div>
+
+  <button class="btn btn-primary" type="submit">Sign Up</button>
+
+  <p>Already have account?
+    <a routerLink='/login'>Login</a>
+  </p>
+</form>
+
+    <div class="alert alert-success" *ngIf="isSuccessful">
+			Your registration is successful! We've sent you a verification mail to your email account.
+		</div>
+  </div>
+</div>
+
